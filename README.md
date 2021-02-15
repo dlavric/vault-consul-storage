@@ -35,21 +35,6 @@ $ vagrant up
 $ vagrant ssh
 ```
 
-- Go to the /vagrant directory
-```shell
-$ cd /vagrant
-```
-
-- Change consul's file user and group ownership
-```shell
-$ sudo chown -R consul:consul consul
-```
-
-- Start Consul
-```shell
-$ sudo systemctl start consul
-```
-
 - Check the status of Consul
 ```shell
 $ sudo systemctl status consul
@@ -67,9 +52,9 @@ Output:
            └─15215 /usr/bin/consul agent -config-dir=/etc/consul.d/
 ```
 
-- Start Vault
+- Check Vault
 ```shell
-$ vault server -config=./scripts/vault-config/config.hcl
+systemctl status vault
 ```
 
 Output:
